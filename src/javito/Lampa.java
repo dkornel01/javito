@@ -11,7 +11,7 @@ public class Lampa {
     int toltottseg=100;
     
     public Lampa() {
-
+        
     }
     public int getVillogas() {
         return villogas;
