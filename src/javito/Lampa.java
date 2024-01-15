@@ -48,9 +48,27 @@ public class Lampa {
             toltottseg=toltottseg-1;
         }
         else {
-            toltottseg=toltottseg-3;
-            minoseg=minoseg-3;
+            if (toltottseg>3){
+                if (minoseg>3){
+                toltottseg=toltottseg-5;
+                minoseg=minoseg-3;
+                }
+                else{
+                System.out.println("javitani kell");
+                minoseg=0;
+                }
+            }
+            else {
+            System.out.println("lemerult");
+            toltottseg=0;
+            }
         }
+    }
+    public void elemcsere(){
+        toltottseg=100;
+    }
+    public void javitas(){
+        minoseg=100;
     }
     
     public void kiiras(){
