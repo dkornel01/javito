@@ -5,18 +5,13 @@
 package javito;
 
 
-import model.Model;
-import view.View;
-
-
 public class Lampa {
     int villogas=0;
-    int minőseg=100;
-    int töltöttseg=100;
+    int minoseg=100;
+    int toltottseg=100;
     
     public Lampa() {
-        Model mod=new Model(villogas);
-        View view=new View(villogas);
+
     }
     public int getVillogas() {
         return villogas;
@@ -26,32 +21,61 @@ public class Lampa {
         this.villogas = villogas;
     }
 
-    public int getMinőseg() {
-        return minőseg;
+    public int getMinoseg() {
+        return minoseg;
     }
 
-    public void setMinőseg(int minőseg) {
-        this.minőseg = minőseg;
+    public void setMinoseg(int minoseg) {
+        this.minoseg = minoseg;
     }
 
-    public int getTöltöttseg() {
-        return töltöttseg;
+    public int getToltottseg() {
+        return toltottseg;
     }
 
-    public void setTöltöttseg(int töltöttseg) {
-        this.töltöttseg = töltöttseg;
+    public void setToltottseg(int toltottseg) {
+        this.toltottseg = toltottseg;
     }
-     public int kapcsolas(int villogas){
+     public int kapcsolas(){
         villogas++;
         if (villogas==6){
             villogas=0;
         }
         return villogas;
     }
-    public int hasznalat(int minőseg, int töltöttség){
+    public void hasznalat(){
         if(villogas==0){
-            
+            toltottseg=toltottseg-1;
+        }
+        else {
+            toltottseg=toltottseg-3;
+            minoseg=minoseg-3;
         }
     }
     
+    public void kiiras(){
+        if (villogas==0){
+            System.out.println("nem világit");
+        }
+        else if (villogas==1){
+            System.out.println("világit");
+        }
+        else if (villogas==2){
+            System.out.println("lassan villog");
+        }
+        else if (villogas==3){
+            System.out.println("közepesesn villog");
+        }
+        else if (villogas==4){
+            System.out.println("gyorsan villog");
+        }
+        else if (villogas==5){
+            System.out.println("folyamatosan villog");
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Lampa{" + "villogas=" + villogas + ", minoseg=" + minoseg + ", toltottseg=" + toltottseg + '}';
+    }
 }
