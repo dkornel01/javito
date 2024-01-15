@@ -36,12 +36,14 @@ public class Lampa {
     public void setToltottseg(int toltottseg) {
         this.toltottseg = toltottseg;
     }
-     public int kapcsolas(){
-        villogas++;
-        if (villogas==6){
-            villogas=0;
+     public void kapcsolas(){
+        if (toltottseg>0 && minoseg>0){
+            villogas++;
+            if (villogas==6){
+                villogas=0;
+            }
         }
-        return villogas;
+
     }
     public void hasznalat(){
         if(villogas==0){
