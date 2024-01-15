@@ -15,7 +15,8 @@ public class Javito {
         run();
     }
     static public void run(){
-        Lampa lampa=new Lampa(0);
+        Lampa lampa=new Lampa();
+        
     }
     
 }
