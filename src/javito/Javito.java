@@ -10,11 +10,12 @@ package javito;
  */
 public class Javito {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        run();
+    }
+    static public void run(){
+        
     }
     
 }
